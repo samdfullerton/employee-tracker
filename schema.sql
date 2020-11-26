@@ -4,8 +4,9 @@ CREATE DATABASE employee_trackDB;
 USE employee_trackDB;
 
 CREATE TABLE department (
-  id INT PRIMARY KEY,
-  name VARCHAR (30) NOT NULL
+  id INT AUTO_INCREMENT,
+  name VARCHAR (30) NOT NULL,
+  PRIMARY KEY (id)
 );
 
 CREATE TABLE role (

@@ -2,7 +2,8 @@ var mysql = require("mysql");
 var con = mysql.createConnection({
     host: "localhost",
     user: "root",
-    password: ""
+    password: "rootroot",
+    database: "employee_trackDB"
 });
 con.connect(function(err) {
     if(err) {
@@ -11,3 +12,4 @@ con.connect(function(err) {
         console.log("connected")
     }
 });
+module.exports = con;

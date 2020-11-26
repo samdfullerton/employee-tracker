@@ -1,3 +1,5 @@
+const db = require("./db.js")
+
 var inquirer = require("inquirer");
 inquirer
     .prompt([
@@ -16,7 +18,7 @@ inquirer
                     message: "please enter department"
                 }
             ]).then(answers =>{
-                console.log(answers)
+                db.addDept(answers.department)
             })
         }else if (answers.type === "role"){
             inquirer.prompt([
@@ -36,7 +38,7 @@ inquirer
                     message: "enter the department id"
                 }
             ]).then(answers =>{
-                console.log(answers)
+                db.addRole(answers.title, answers.salary)
             })
         }else {
             inquirer.prompt([
